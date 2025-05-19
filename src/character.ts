@@ -5,15 +5,15 @@ export const character: Character = {
   ...defaultCharacter,
   // name: "Eliza",
   plugins: [getGiftPlugin],
-  clients: [],
-  modelProvider: ModelProviderName.GOOGLE,
+  clients: [Clients.TWITTER],
+  modelProvider: ModelProviderName.OPENAI,
   settings: {
     secrets: {},
     voice: {
       model: "en_US-hfc_female-medium",
     },
     chains: {
-      evm: ["avalancheFuji"],
+      evm: ["baseSepolia"],
     },
   },
 };

@@ -37,11 +37,11 @@ export class GetGiftAction {
      * @throws Will throw an error if contract address, slot ID, version, or subscription ID is not set.
      */
     async getGift(params: GetGiftParams): Promise<Transaction> {
-        const chainName = "avalancheFuji";
-        const contractAddress: `0x${string}` =  "0x00" // dev TODO
-        const donHostedSecretsSlotID:number = Infinity // dev TODO
-        const donHostedSecretsVersion:number = Infinity // dev TODO
-        const clSubId:number = Infinity // dev TODO
+              const chainName = "baseSepolia";
+        const contractAddress: `0x${string}`=  "0xd9145cce52d386f254917e481eb44e9943f39138"; // dev TODO
+        const donHostedSecretsSlotID:number = 0 ; // dev TODO
+        const donHostedSecretsVersion:number = 1747641994 ;// dev TODO
+        const clSubId:number = 321 ; // dev TODO
 
         if (contractAddress === "0x00" || donHostedSecretsSlotID === Infinity || donHostedSecretsVersion === Infinity || clSubId === Infinity) {
             throw new Error("Contract address, slot ID, version, or subscription ID is not set");
@@ -164,7 +164,7 @@ export const getGiftAction: Action = {
                         hash: callFunctionResp.hash,
                         amount: formatEther(callFunctionResp.value),
                         recipient: callFunctionResp.to,
-                        chain: "avalanchefuji",
+                        chain: "baseSepolia",
                     },
                 });
             }
