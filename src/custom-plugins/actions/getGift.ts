@@ -38,9 +38,9 @@ export class GetGiftAction {
      */
     async getGift(params: GetGiftParams): Promise<Transaction> {
               const chainName = "baseSepolia";
-        const contractAddress: `0x${string}`=  "0xd9145cce52d386f254917e481eb44e9943f39138"; // dev TODO
+        const contractAddress: `0x${string}`=  "0x00915d20846C807f5d8a42B840A514e918107Df3"; // dev TODO
         const donHostedSecretsSlotID:number = 0 ; // dev TODO
-        const donHostedSecretsVersion:number = 1747641994 ;// dev TODO
+        const donHostedSecretsVersion:number = 1747992837 ;// dev TODO
         const clSubId:number = 321 ; // dev TODO
 
         if (contractAddress === "0x00" || donHostedSecretsSlotID === Infinity || donHostedSecretsVersion === Infinity || clSubId === Infinity) {
